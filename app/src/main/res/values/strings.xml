@@ -1,10 +1,12 @@
 <resources>
     <string name="app_name">Basic E-Commerce</string>
-    <string name="ic_desc">Sales</string>
+    <string name="sales_desc">Sales</string>
     <string name="contacts_text">Contacts</string>
     <string name="about_text">About</string>
     <string name="home_page_text">Home</string>
     <string name="logo_of_app_1">Courses</string>
     <string name="logo_of_app_2">App</string>
-
+    <string name="filter_desc">Filter</string>
+    <string name="category_desc">category</string>
+    <string name="category_name">Item</string>
 </resources>
