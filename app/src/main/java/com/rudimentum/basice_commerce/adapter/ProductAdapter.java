@@ -1,7 +1,11 @@
 package com.rudimentum.basice_commerce.adapter;
 
+import android.app.Activity;
+import android.app.ActivityOptions;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
+import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +17,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.rudimentum.basice_commerce.ProductPage;
 import com.rudimentum.basice_commerce.R;
 import com.rudimentum.basice_commerce.model.Product;
 
@@ -43,6 +48,27 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
 
         int imageId = context.getResources().getIdentifier("ic_" + products.get(position).getImg(), "drawable", context.getPackageName());
         holder.productImage.setImageResource(imageId);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, ProductPage.class);
+
+                ActivityOptions activityOptions = ActivityOptions.makeSceneTransitionAnimation(
+                        (Activity) context,
+                        new Pair<View, String>(holder.productImage, "productImage")
+                );
+
+                intent.putExtra("productBackground", Color.parseColor(products.get(position).getColor()));
+                intent.putExtra("productImage", imageId);
+                intent.putExtra("productName", products.get(position).getName());
+                intent.putExtra("productDate", products.get(position).getDate());
+                intent.putExtra("productLevel", products.get(position).getLevel());
+                intent.putExtra("productText", products.get(position).getText());
+
+                context.startActivity(intent, activityOptions.toBundle());
+            }
+        });
     }
 
     @Override

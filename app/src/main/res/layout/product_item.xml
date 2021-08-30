@@ -27,6 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/product_img_desc"
+                android:transitionName="productImage"
                 app:srcCompat="@drawable/ic_java" />
 
             <TextView
@@ -80,7 +81,7 @@
                     android:textSize="14sp"
                     android:fontFamily="@font/montserrat_bold"
                     android:layout_margin="11dp"
-                    android:text="@string/product_start_date"
+                    android:text="@string/product_start_date_info"
                     />
 
                 <TextView
@@ -90,9 +91,9 @@
                     android:textColor="@color/white"
                     android:textSize="14sp"
                     android:fontFamily="@font/montserrat_bold"
-                    android:layout_marginTop="11dp"
-                    android:layout_marginStart="44dp"
-                    android:text="@string/product_level"
+                    android:layout_margin="11dp"
+                    android:layout_marginStart="34dp"
+                    android:text="@string/product_level_info"
                     />
             </LinearLayout>
 

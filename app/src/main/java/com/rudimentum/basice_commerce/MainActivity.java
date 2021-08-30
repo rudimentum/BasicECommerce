@@ -33,9 +33,9 @@ public class MainActivity extends AppCompatActivity {
         setCategoryRecycler(categoryList);
 
         List<Product> productList = new ArrayList<>();
-        productList.add(new Product(1, "#424345", "java", "Course:\nJava developer","January 1st", "Junior"));
-        productList.add(new Product(2, "#9FA52D", "python", "Course:\nPython developer","January 1st", "Junior"));
-        productList.add(new Product(3,"#FF4D00", "front_end","Course:\nFront-end developer","January 1st", "Middle"));
+        productList.add(new Product(1, "#424345", "java", "Course:\nJava developer","January 1st", "Junior", "test"));
+        productList.add(new Product(2, "#9FA52D", "python", "Course:\nPython developer","January 1st", "Junior", "test"));
+        productList.add(new Product(3,"#FF4D00", "front_end","Course:\nFront-end developer","January 1st", "Middle", "test"));
 
         setProductRecycler(productList);
     }
