@@ -17,7 +17,9 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     RecyclerView categoryRecycler, productRecycler;
     CategoryAdapter categoryAdapter;
-    ProductAdapter productAdapter;
+    static ProductAdapter productAdapter;
+    static List<Product> productList = new ArrayList<>();
+    static List<Product> fullProductList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,10 +34,12 @@ public class MainActivity extends AppCompatActivity {
 
         setCategoryRecycler(categoryList);
 
-        List<Product> productList = new ArrayList<>();
-        productList.add(new Product(1, "#424345", "java", "Course:\nJava developer","January 1st", "Junior", "test"));
-        productList.add(new Product(2, "#9FA52D", "python", "Course:\nPython developer","January 1st", "Junior", "test"));
-        productList.add(new Product(3,"#FF4D00", "front_end","Course:\nFront-end developer","January 1st", "Middle", "test"));
+
+        productList.add(new Product(1, 3, "#424345", "java", "Course:\nJava developer","January 1st", "Junior", "test"));
+        productList.add(new Product(2, 4, "#9FA52D", "python", "Course:\nPython developer","January 1st", "Junior", "test"));
+        productList.add(new Product(3, 2, "#FF4D00", "front_end","Course:\nFront-end developer","January 1st", "Middle", "test"));
+
+        fullProductList.addAll(productList);
 
         setProductRecycler(productList);
     }
@@ -58,5 +62,23 @@ public class MainActivity extends AppCompatActivity {
 
         categoryAdapter = new CategoryAdapter(this, categoryList);
         categoryRecycler.setAdapter(categoryAdapter);
+    }
+
+    public static void showProductsByCategory(int category) {
+        productList.clear();
+        productList.addAll(fullProductList);
+
+        List<Product> filterProducts = new ArrayList<>();
+
+        for (Product product : productList) {
+            if (product.getCategory() == category) {
+                filterProducts.add(product);
+            }
+        }
+
+        productList.clear();
+        productList.addAll(filterProducts);
+
+        productAdapter.notifyDataSetChanged();
     }
 }

@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.rudimentum.basice_commerce.MainActivity;
 import com.rudimentum.basice_commerce.R;
 import com.rudimentum.basice_commerce.model.Category;
 
@@ -33,6 +34,13 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
     @Override
     public void onBindViewHolder(@NonNull CategoryAdapter.CategoryViewHolder holder, int position) {
         holder.categoryName.setText(categories.get(position).getName());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivity.showProductsByCategory(categories.get(position).getId());
+            }
+        });
     }
 
     @Override
