@@ -65,6 +65,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
                 intent.putExtra("productDate", products.get(position).getDate());
                 intent.putExtra("productLevel", products.get(position).getLevel());
                 intent.putExtra("productText", products.get(position).getText());
+                intent.putExtra("productId", products.get(position).getId());
 
                 context.startActivity(intent, activityOptions.toBundle());
             }

@@ -14,4 +14,6 @@
     <string name="product_start_date_info">Start date:</string>
     <string name="product_level_info">Level:</string>
     <string name="product_text">You will learn how to build graphical applications for a PC, Java-based website development Spring Boot, learn how to build full-fledged Android applications and perfectly learn the Java language itself!</string>
+    <string name="add_to_cart_button">Add to cart</string>
+    <string name="cart_button">Cart</string>
 </resources>

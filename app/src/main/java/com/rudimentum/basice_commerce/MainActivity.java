@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.rudimentum.basice_commerce.adapter.CategoryAdapter;
 import com.rudimentum.basice_commerce.adapter.ProductAdapter;
@@ -42,6 +44,11 @@ public class MainActivity extends AppCompatActivity {
         fullProductList.addAll(productList);
 
         setProductRecycler(productList);
+    }
+
+    public void openCart(View view) {
+        Intent intent = new Intent(this, OrderPage.class);
+        startActivity(intent);
     }
 
     private void setProductRecycler(List<Product> productList) {

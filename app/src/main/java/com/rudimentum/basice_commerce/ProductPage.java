@@ -4,8 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.rudimentum.basice_commerce.model.Order;
 
 public class ProductPage extends AppCompatActivity {
     ConstraintLayout productPageBackground;
@@ -34,5 +38,11 @@ public class ProductPage extends AppCompatActivity {
         productPageLevel.setText(getIntent().getStringExtra("productLevel"));
         productPageText.setText(getIntent().getStringExtra("productText"));
 
+    }
+
+    public void addToCart(View view) {
+        int itemId = getIntent().getIntExtra("productId", 0);
+        Order.items.add(itemId);
+        Toast.makeText(this, "Added to cart", Toast.LENGTH_LONG).show();
     }
 }
