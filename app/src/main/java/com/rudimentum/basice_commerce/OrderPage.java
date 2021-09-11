@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.rudimentum.basice_commerce.model.Order;
 import com.rudimentum.basice_commerce.model.Product;
 
 import java.util.ArrayList;
