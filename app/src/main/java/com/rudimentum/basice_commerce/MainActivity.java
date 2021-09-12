@@ -51,6 +51,13 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void clearCategoryFilter(View view) {
+        productList.clear();
+        productList.addAll(fullProductList);
+
+        productAdapter.notifyDataSetChanged();
+    }
+
     private void setProductRecycler(List<Product> productList) {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false);
 
