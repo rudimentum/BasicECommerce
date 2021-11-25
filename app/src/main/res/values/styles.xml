@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="GlobalTextViewMontserrat">
+        <item name="android:textColor">@color/black</item>
+        <item name="fontFamily">@font/montserrat</item>
+    </style>
+    <style name="GlobalTextViewMontserratBold">
+        <item name="android:textColor">@color/black</item>
+        <item name="fontFamily">@font/montserrat_bold</item>
+    </style>
+    <style name="GlobalTextViewMontserrat.20">
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="GlobalTextViewMontserrat.40">
+        <item name="android:textSize">40sp</item>
+    </style>
+    <style name="GlobalTextViewMontserratBold.20">
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="GlobalTextViewMontserratBold.40">
+        <item name="android:textSize">40sp</item>
+    </style>
+    <style name="ProductTextView">
+        <item name="android:textSize">14sp</item>
+        <item name="color">@color/white</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+    <style name="ProductTextView.Montserrat">
+        <item name="fontFamily">@font/montserrat</item>
+    </style>
+    <style name="ProductTextView.MontserratBold">
+        <item name="fontFamily">@font/montserrat_bold</item>
+    </style>
+</resources>

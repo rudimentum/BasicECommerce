@@ -46,22 +46,14 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:textSize="14sp"
-                    android:fontFamily="@font/montserrat"
+                    style="@style/ProductTextView.Montserrat"
                     android:layout_margin="11dp"
                     android:layout_marginTop="28dp"
                     android:text="@string/product_start_date_info"
                     />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:textSize="14sp"
-                    android:fontFamily="@font/montserrat"
+                    style="@style/ProductTextView.Montserrat"
                     android:layout_margin="11dp"
                     android:layout_marginStart="34dp"
                     android:layout_marginTop="28dp"
@@ -75,22 +67,14 @@
 
                 <TextView
                     android:id="@+id/productDate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:textSize="14sp"
-                    android:fontFamily="@font/montserrat_bold"
+                    style="@style/ProductTextView.MontserratBold"
                     android:layout_margin="11dp"
                     android:text="@string/product_start_date_info"
                     />
 
                 <TextView
                     android:id="@+id/productLevel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:textSize="14sp"
-                    android:fontFamily="@font/montserrat_bold"
+                    style="@style/ProductTextView.MontserratBold"
                     android:layout_margin="11dp"
                     android:layout_marginStart="34dp"
                     android:text="@string/product_level_info"

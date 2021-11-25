@@ -30,43 +30,37 @@
 
         <TextView
             android:id="@+id/contacts"
+            style="@style/GlobalTextViewMontserrat.20"
             android:layout_width="100dp"
             android:layout_height="145dp"
             android:layout_marginBottom="100dp"
-            android:fontFamily="@font/montserrat"
             android:gravity="center"
             android:rotation="270"
             android:text="@string/contacts_text"
-            android:textColor="@color/black"
-            android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/imageView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/about"
+            style="@style/GlobalTextViewMontserrat.20"
             android:layout_width="100dp"
             android:layout_height="145dp"
-            android:fontFamily="@font/montserrat"
             android:gravity="center"
             android:rotation="270"
             android:text="@string/about_text"
-            android:textColor="@color/black"
-            android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/contacts"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/homePage"
+            style="@style/GlobalTextViewMontserratBold.20"
             android:layout_width="100dp"
             android:layout_height="145dp"
-            android:fontFamily="@font/montserrat_bold"
             android:gravity="center"
             android:rotation="270"
             android:text="@string/home_page_text"
-            android:textColor="@color/black"
-            android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/about"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -119,25 +113,17 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/ProductTextView.Montserrat"
                     android:layout_margin="11dp"
                     android:layout_marginTop="28dp"
-                    android:fontFamily="@font/montserrat"
-                    android:text="@string/product_start_date_info"
-                    android:textColor="@color/white"
-                    android:textSize="14sp" />
+                    android:text="@string/product_start_date_info" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/ProductTextView.Montserrat"
                     android:layout_margin="11dp"
                     android:layout_marginStart="34dp"
                     android:layout_marginTop="28dp"
-                    android:fontFamily="@font/montserrat"
-                    android:text="@string/product_level_info"
-                    android:textColor="@color/white"
-                    android:textSize="14sp" />
+                    android:text="@string/product_level_info" />
             </LinearLayout>
 
             <LinearLayout
@@ -146,24 +132,16 @@
 
                 <TextView
                     android:id="@+id/productPageDate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/ProductTextView.MontserratBold"
                     android:layout_margin="11dp"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:text="@string/product_start_date_info"
-                    android:textColor="@color/white"
-                    android:textSize="14sp" />
+                    android:text="@string/product_start_date_info" />
 
                 <TextView
                     android:id="@+id/productPageLevel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/ProductTextView.MontserratBold"
                     android:layout_margin="11dp"
                     android:layout_marginStart="34dp"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:text="@string/product_level_info"
-                    android:textColor="@color/white"
-                    android:textSize="14sp" />
+                    android:text="@string/product_level_info" />
             </LinearLayout>
 
         </LinearLayout>
